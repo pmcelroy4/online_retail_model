@@ -20,3 +20,5 @@ df = pd.read_excel(data_path)
 print(df.info())
 print(df.describe())
 print(df.head())
+
+
