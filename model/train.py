@@ -21,4 +21,27 @@ print(df.info())
 print(df.describe())
 print(df.head())
 
+# numeric features
+numeric_features = [
+    "Quantity",
+    "UnitPrice",
+    "CustomerID"
+]
+
+# distribution of numeric features
+plt.figure(figsize=(12,8))
+for i, feature in enumerate(numeric_features):
+    plt.subplots(3, 1, i)
+    sns.histplot(df[feature], kde=True)
+    plt.title(f"Distrubution of {feature}")
+plt.tight_layout()
+plt.show()
+
+# correlation plot of numeric features
+plt.figure(figsize=(8,6))
+corr = df[numeric_features].corr()
+sns.heatmap(corr, annot=True, cmap="coolwarm", fmt=".2f")
+plt.title("Correlation Matrix")
+plt.show()
+
 
