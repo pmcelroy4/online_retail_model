@@ -12,7 +12,8 @@ Segment customers into distinct groups based on purchasing behavior and demograp
 - Visualizations for interpretation
 
 ## 📁 Project Structure
-
+```bash
+.
 Online Retail/
 ├── data/ # (Optional) Raw or processed datasets
 ├── model/
@@ -23,6 +24,7 @@ Online Retail/
 ├── requirements.txt # Python dependencies
 ├── README.md # Project documentation
 └── .gitignore # Files and folders to exclude from Git
+```
 
 
 ## 🧠 Model Details
