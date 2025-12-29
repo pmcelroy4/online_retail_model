@@ -54,3 +54,4 @@ def clean_data(df):
     data['Unique Items'] = df.groupby('CustomerID')['StockCode'].count()
     data['Avg Items'] = df.groupby('CustomerID')['Quantity'].mean()
     data['Avg Unit Price'] = df.groupby('CustomerID')['UnitPrice'].mean()
+    data = data.drop('CustomerID', axis=1) # Drop CustomerID for clustering

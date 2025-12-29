@@ -1,7 +1,7 @@
 # model/train.py
 
 import pandas as pd
-from sklearn.cluster import DBSCAN, KMeans, MeanShift
+from sklearn.cluster import DBSCAN, KMeans, MeanShift, SpectralClustering
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error
 import os
@@ -18,5 +18,6 @@ data = clean_data(df)
 scaler = StandardScaler()
 X_scaled = scaler.fit_transform(data)
 
+# Train different clustering algorithms - DBScan, KMeans, MeanShift, Spectral
 
 
